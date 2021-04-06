@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/bestSellersFragment">
+
+    <fragment
+        android:id="@+id/bestSellersFragment"
+        android:name="com.example.nytimesdemo.view.BestSellersFragment"
+        android:label="fragment_best_sellers"
+        tools:layout="@layout/fragment_best_sellers" >
+        <action
+            android:id="@+id/action_bestSellersFragment_to_listByNameFragment"
+            app:destination="@id/listByNameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listByNameFragment"
+        android:name="com.example.nytimesdemo.view.ListByNameFragment"
+        android:label="fragment_list_by_name"
+        tools:layout="@layout/fragment_list_by_name" >
+        <argument android:name="listName"
+            app:argType="string"/>
+    </fragment>
+</navigation>
